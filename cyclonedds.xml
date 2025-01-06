@@ -1,12 +1,14 @@
 <CycloneDDS xmlns="https://cdds.io/config">
-  <Domain id="0">
+  <Domain id="any">
     <General>
-      <AllowMulticast>false</AllowMulticast>
+      <Interfaces>
+        <NetworkInterface address="192.168.1.159" /> <!-- Replace me with the current host IP -->
+      </Interfaces>
     </General>
     <Discovery>
       <Peers>
-        <Peer address="192.168.1.101" />  <!-- Example Peer 1 -->
-        <Peer address="192.168.1.102" />  <!-- Example Peer 2 -->
+        <Peer address="192.168.1.159" />  <!-- Example Peer 1 -->
+        <Peer address="192.168.1.155" />  <!-- Example Peer 2 -->
         <!-- Add other peer IP addresses -->
       </Peers>
     </Discovery>
