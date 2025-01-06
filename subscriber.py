@@ -33,12 +33,15 @@ dsdr = DataReader(dp, dstp)
 outfile_size = 0
 filesize = 0
 
+current_requests = set()
+
 while filesize == 0 or outfile_size < filesize:
     for sample in dadr.take(10):
         print("Read ", sample)
-        if sample.filename == args.filename:
+        if sample.filename == args.filename and sample.filename not in current_requests:
             filesize = sample.filesize
-            msg = DataRequest(filename=sample.filename)
+            current_requests.add(sample.filename)
+            msg = DataRequest(filename=args.filename)
             print("Write ", msg)
             drdw.write(msg)
     for sample in dsdr.take(10):
