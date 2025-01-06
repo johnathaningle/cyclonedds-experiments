@@ -13,6 +13,8 @@ except:
     import os
     name = f"{os.getpid()}"
 
+os.environ["CYCLONEDDS_URI"] = "file://cyclonedds.xml"
+
 #add command line arguments for filename and output directory
 import argparse
 parser = argparse.ArgumentParser()
