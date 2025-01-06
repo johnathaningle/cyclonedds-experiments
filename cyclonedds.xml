@@ -1,0 +1,16 @@
+<CycloneDDS xmlns="https://cdds.io/config">
+  <Domain id="0">
+    <General>
+      <AllowMulticast>false</AllowMulticast>
+    </General>
+    <Discovery>
+      <Peers>
+        <Peer address="192.168.1.101" />  <!-- Example Peer 1 -->
+        <Peer address="192.168.1.102" />  <!-- Example Peer 2 -->
+        <!-- Add other peer IP addresses -->
+      </Peers>
+    </Discovery>
+  </Domain>
+</CycloneDDS>
+
+    
