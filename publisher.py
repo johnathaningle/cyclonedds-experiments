@@ -15,7 +15,6 @@ except:
 
 os.environ["CYCLONEDDS_URI"] = "file://cyclonedds.xml"
 
-rng = np.random.default_rng()
 dp = DomainParticipant()
 datp = Topic(dp, "DataAvaliable", DataAvaliable, qos=Qos(Policy.Reliability.Reliable(0)))
 dadw = DataWriter(dp, datp)
