@@ -1,0 +1,1 @@
+export CYCLONEDDS_URI=$(pwd)/cyclonedds.xml
